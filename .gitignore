@@ -1,0 +1,38 @@
+# Old versions / local backups
+*-old.*
+*-old[0-9]*.*
+*.bak
+*.tmp
+*.swp
+*~
+
+# Folders starting with underscore
+_*/
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor/project settings
+.vscode/
+.idea/
+
+# Archives
+*.zip
+*.7z
+*.rar
+
+# Local environment/config files
+.env
+.env.*
+
+# Log files
+*.log
+
+# Python junk, if scripts ever get added
+__pycache__/
+*.pyc
+
+# Node junk, if tooling ever gets added
+node_modules/
