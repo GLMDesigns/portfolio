@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A BrokerTec UX case study by Gilbert Louis Midonnet about permissions-aware information architecture, structured data, business requirements, and front-end implementation.">
+  <title>BrokerTec Case Study | Gilbert Louis Midonnet</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="case-study-page brokertec-page">
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="site-brand" href="index.html" aria-label="Gilbert Louis Midonnet portfolio home">
+        <strong>Gilbert Louis Midonnet</strong>
+        <span>UX · Customer experience · Enterprise systems</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Portfolio navigation">
+        <a href="index.html">Who I am</a>
+        <a href="career-timeline.html">Career timeline</a>
+        <a href="work-by-type.html">Work by type</a>
+        <a href="case-studies.html" aria-current="page">Case studies</a>
+      </nav>
+    </header>
+
+    <main class="page-main">
+      <section class="gb-hero">
+        <div>
+          <p class="kicker">Compact case · BrokerTec</p>
+          <h1>Designing a data-heavy platform around access.</h1>
+          <p class="gb-lede">More than twenty permission categories shaped what different users could see. The challenge was not simply organizing information; it was maintaining a growing repository while presenting role-appropriate information through shared pages.</p>
+        </div>
+
+        <aside class="gb-facts" aria-label="BrokerTec case study facts">
+          <div class="gb-fact"><span>Role</span><strong>Senior information architect · Web developer</strong></div>
+          <div class="gb-fact"><span>Context</span><strong>Fixed-income trading platform</strong></div>
+          <div class="gb-fact"><span>Focus</span><strong>Permissions · Data organization · Implementation</strong></div>
+          <div class="gb-fact"><span>Tools</span><strong>Visio · Photoshop · HTML · JavaScript · SQL · ColdFusion</strong></div>
+        </aside>
+      </section>
+
+      <section class="gb-context">
+        <div>
+          <p class="kicker">Context</p>
+          <h2>Business tools with technical consequences.</h2>
+        </div>
+        <div class="gb-context-copy">
+          <p>BrokerTec was a fixed-income trading platform created by ICAP, Merrill Lynch, and other participants in the financial industry. My work centered on tools for business users and the information structures supporting them.</p>
+          <p>I gathered requirements, produced functional flows and wireframes, secured stakeholder approval, and then translated approved designs into working interfaces. Information architecture and implementation were parts of the same role.</p>
+          <div class="gb-pill-row">
+            <a class="gb-pill" href="use-cases-requirements-personas.html">Business-user requirements</a>
+            <a class="gb-pill" href="functional-flows.html">Functional flows</a>
+            <a class="gb-pill" href="wireframes-prototypes.html">Wireframes</a>
+            <span class="gb-pill">Stakeholder approval</span>
+            <span class="gb-pill">Front-end implementation</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="gb-section">
+        <div class="gb-section-head">
+          <div>
+            <p class="kicker">01 · The design problem</p>
+            <h2>Permissions were part of the information architecture.</h2>
+          </div>
+          <p>Most sections were shared by many permission groups, but the information and actions available within those sections could differ. Access was therefore not a final security layer placed on top of the design; it affected the page structure itself.</p>
+        </div>
+
+        <div class="gb-three">
+          <article class="gb-concern"><span class="gb-concern-number">01</span><h3>More than twenty permission categories</h3><p>The number of roles created many possible combinations of information, access, and responsibility.</p></article>
+          <article class="gb-concern"><span class="gb-concern-number">02</span><h3>Shared sections, different visibility</h3><p>Multiple audiences used the same broad areas, so pages had to accommodate role-specific information without becoming separate sites.</p></article>
+          <article class="gb-concern"><span class="gb-concern-number">03</span><h3>An expanding data repository</h3><p>Creating, maintaining, documenting, and progressively organizing the repository was an ongoing IA problem rather than a one-time sitemap exercise.</p></article>
+        </div>
+
+        <div class="gb-principle">
+          <blockquote>The same page did not mean the same experience.</blockquote>
+          <p>Role and permission determined what information a user could see. The interface had to remain coherent even when its contents changed by audience.</p>
+        </div>
+      </section>
+
+      <section class="gb-section">
+        <div class="gb-section-head">
+          <div>
+            <p class="kicker">02 · Design to implementation</p>
+            <h2>The work continued past the wireframe.</h2>
+          </div>
+          <p>Because the role included front-end development, the design process stayed closely connected to feasibility, data behavior, and production constraints.</p>
+        </div>
+
+        <div class="gb-evidence">
+          <figure class="gb-figure">
+            <div class="gb-image-wrap gb-image-wrap--brokertec"><img src="graphics/BrokerTec/Mockup-BTEC-wordpress.webp" width="450" height="824" alt="Composite of three surviving BrokerTec web pages: landing page, company page, and market-data page"></div>
+            <figcaption><strong>Surviving BrokerTec pages</strong><span>Three preserved views: the landing page, corporate information, and market-data content.</span></figcaption>
+          </figure>
+
+          <div>
+            <h3>One role bridged four stages.</h3>
+            <div class="gb-implementation">
+              <div class="gb-step"><b>01</b><span>Gather requirements directly from business users.</span></div>
+              <div class="gb-step"><b>02</b><span>Model the behavior through functional flows and wireframes.</span></div>
+              <div class="gb-step"><b>03</b><span>Review and secure approval from department heads.</span></div>
+              <div class="gb-step"><b>04</b><span>Translate the approved design into HTML, JavaScript, ColdFusion, and SQL-backed interfaces.</span></div>
+            </div>
+            <p>The value was not merely knowing both design and code. It was being able to discover implementation consequences while the interaction was still being shaped.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="gb-section">
+        <div class="gb-section-head">
+          <div>
+            <p class="kicker">03 · Early data delivery</p>
+            <h2>Structured data changed what one page could do.</h2>
+          </div>
+          <p>BrokerTec used WDDX—an early web data-exchange format—to present a fifteen-minute delayed ticker and support classified information for different audiences within the same page structure.</p>
+        </div>
+
+        <div class="gb-data-story">
+          <div>
+            <h3>Why that mattered to the experience</h3>
+            <p>Structured data delivery made the page less static. Information could be updated and varied without rebuilding an entirely different page for each group.</p>
+            <p>The technical mechanism and the information architecture were connected: the data format helped make role-sensitive presentation practical.</p>
+            <div class="gb-pill-row">
+              <span class="gb-pill">WDDX</span>
+              <span class="gb-pill">15-minute delayed ticker</span>
+              <span class="gb-pill">Role-sensitive content</span>
+              <span class="gb-pill">Shared page structure</span>
+            </div>
+          </div>
+          <div class="gb-tech-card">
+            <span>Technical note</span>
+            <h3>An early web data-exchange pattern</h3>
+            <p>WDDX used XML to move structured data between systems. In this project, it supported a form of dynamic, data-driven presentation before the patterns now associated with JSON-based applications became commonplace.</p>
+          </div>
+        </div>
+
+        <div class="gb-note"><strong>Evidence boundary:</strong> the three surviving visuals show public BrokerTec pages. The original portfolio text documents the permission model, repository problem, and WDDX behavior, but the complete internal tools and all role variants do not survive. The case therefore remains intentionally concise.</div>
+      </section>
+
+      <section class="gb-artifacts">
+        <div class="gb-artifact-head">
+          <div>
+            <p class="kicker">What the work left behind</p>
+            <h2>The evidence attached to this job.</h2>
+          </div>
+          <p>The surviving material is limited, but it still supports a distinct contribution at the intersection of information architecture and implementation.</p>
+        </div>
+
+        <div class="gb-artifact-rows">
+          <a class="gb-artifact-row" href="site-maps-ia.html"><strong>Information architecture</strong><span class="gb-pills"><span class="gb-pill">Permission categories</span><span class="gb-pill">Shared sections</span><span class="gb-pill">Repository organization</span><span class="gb-pill">Documentation</span></span></a>
+          <a class="gb-artifact-row" href="use-cases-requirements-personas.html"><strong>UX and business analysis</strong><span class="gb-pills"><span class="gb-pill">Requirements</span><span class="gb-pill">Functional flows</span><span class="gb-pill">Wireframes</span><span class="gb-pill">Stakeholder approval</span></span></a>
+          <div class="gb-artifact-row"><strong>Technical delivery</strong><span class="gb-pills"><span class="gb-pill">HTML</span><span class="gb-pill">JavaScript</span><span class="gb-pill">ColdFusion</span><span class="gb-pill">SQL</span><span class="gb-pill">WDDX</span></span></div>
+          <div class="gb-artifact-row"><strong>Surviving visuals</strong><span class="gb-pills"><span class="gb-pill">BrokerTec public pages</span><span class="gb-pill">Market-data presentation</span></span></div>
+        </div>
+      </section>
+
+      <section class="gb-takeaway">
+        <div>
+          <p class="kicker">Case takeaway</p>
+          <h2>Access rules can shape the interface as deeply as navigation does.</h2>
+          <p>BrokerTec joined information architecture, permissions, structured data, and front-end implementation. The result was a shared system capable of presenting different information to different users without fragmenting into unrelated experiences.</p>
+        </div>
+        <div class="gb-takeaway-list" aria-label="BrokerTec capabilities demonstrated">
+          <span>Permissions-aware information architecture</span>
+          <span>Data-heavy repository organization</span>
+          <span>Business requirements and functional flows</span>
+          <span>Design-to-code implementation</span>
+        </div>
+      </section>
+
+      <section class="gb-next">
+        <p>This is intentionally a compact case: one distinctive problem, the evidence that survives, and a clear account of what the work demonstrates.</p>
+        <div class="button-group">
+          <a class="button button-primary" href="independent-consulting.html">Next case study</a>
+          <a class="button" href="work-by-type.html">Return to work by type</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Gilbert Louis Midonnet · Portfolio</span>
+      <span class="site-footer-links"><a href="resume.pdf">Resume</a><a href="contact.html">Contact</a></span>
+    </footer>
+  </div>
+</body>
+</html>
