@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Functional flow examples by Gilbert Louis Midonnet showing decisions, exceptions, handoffs, and alternate paths across enterprise and consumer projects.">
+  <title>Functional Flows | Gilbert Louis Midonnet</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="artifact-page functional-flows-page">
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="site-brand" href="index.html" aria-label="Gilbert Louis Midonnet portfolio home">
+        <strong>Gilbert Louis Midonnet</strong>
+        <span>UX · Customer experience · Enterprise systems</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Portfolio navigation">
+        <a href="index.html">Who I am</a>
+        <a href="career-timeline.html">Career timeline</a>
+        <a href="work-by-type.html" aria-current="page">Work by type</a>
+        <a href="case-studies.html">Case studies</a>
+      </nav>
+    </header>
+
+    <main class="page-main">
+      <section class="ff-hero">
+        <div>
+          <p class="kicker">Methods &amp; artifacts</p>
+          <h1>Functional flows.</h1>
+          <p class="ff-lede">Making complicated work visible before it becomes software: decisions, exceptions, handoffs, and alternate paths organized so teams can reason about the same system.</p>
+        </div>
+        <aside class="ff-note"><strong>About this collection</strong><p>Examples are grouped by artifact type, but each retains its project context and links back to the job where the work was created.</p></aside>
+      </section>
+
+      <section class="ff-section">
+        <div class="ff-section-head">
+          <div>
+            <p class="kicker">Featured example</p>
+            <h2>From exception to resolution.</h2>
+          </div>
+          <p>The public page shows enough of each artifact to explain the thinking. Full-size documents, supporting screens, and deeper commentary can remain in the interview book.</p>
+        </div>
+
+        <article class="ff-feature">
+          <div class="ff-artboard">
+            <div class="ff-artboard-head"><span>B&amp;H · Enterprise UX</span><span>Schematic preview</span></div>
+            <svg class="ff-flow-large" viewBox="0 0 650 330" role="img" aria-label="Representative functional flow for reviewing and resolving an order discrepancy">
+              <defs><marker id="ff-arrow-large" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="var(--ff-muted)"></path></marker></defs>
+              <path class="ff-connector" marker-end="url(#ff-arrow-large)" d="M125 75 H210"></path><path class="ff-connector" marker-end="url(#ff-arrow-large)" d="M330 75 H412"></path>
+              <path class="ff-connector" marker-end="url(#ff-arrow-large)" d="M492 103 V148 H125 V190"></path><path class="ff-connector" marker-end="url(#ff-arrow-large)" d="M492 103 V190"></path><path class="ff-connector" marker-end="url(#ff-arrow-large)" d="M492 103 V148 H568 V190"></path>
+              <path class="ff-connector" marker-end="url(#ff-arrow-large)" d="M125 238 V275 H276"></path><path class="ff-connector" marker-end="url(#ff-arrow-large)" d="M492 238 V275 H376"></path><path class="ff-connector" marker-end="url(#ff-arrow-large)" d="M568 238 V275 H376"></path>
+              <rect class="ff-node" x="25" y="50" width="100" height="50" rx="3"></rect><text x="75" y="72" text-anchor="middle">Exception</text><text x="75" y="87" text-anchor="middle">reported</text>
+              <rect class="ff-node" x="210" y="50" width="120" height="50" rx="3"></rect><text x="270" y="72" text-anchor="middle">Review order</text><text x="270" y="87" text-anchor="middle">context</text>
+              <polygon class="ff-node-key" points="492,42 555,75 492,108 429,75"></polygon><text x="492" y="72" text-anchor="middle">Classify</text><text x="492" y="87" text-anchor="middle">discrepancy</text>
+              <rect class="ff-node" x="65" y="190" width="120" height="48" rx="3"></rect><text x="125" y="219" text-anchor="middle">Inventory path</text>
+              <rect class="ff-node" x="432" y="190" width="120" height="48" rx="3"></rect><text x="492" y="219" text-anchor="middle">Shipping path</text>
+              <rect class="ff-node" x="528" y="190" width="80" height="48" rx="3"></rect><text x="568" y="211" text-anchor="middle">Payment</text><text x="568" y="226" text-anchor="middle">path</text>
+              <rect class="ff-node-end" x="276" y="252" width="100" height="52" rx="26"></rect><text x="326" y="275" text-anchor="middle">Resolve or</text><text x="326" y="290" text-anchor="middle">escalate</text>
+            </svg>
+          </div>
+
+          <div class="ff-feature-copy">
+            <div>
+              <span class="ff-project">B&amp;H · Enterprise systems</span>
+              <h2>Order discrepancy resolution</h2>
+              <p>A representative view of how a complex internal workflow can be reduced to shared decisions, alternate paths, and an explicit end state.</p>
+              <div class="ff-points">
+                <div class="ff-point"><strong>What it clarified</strong><span>Where the work diverged, what information was required, and when an exception needed escalation.</span></div>
+                <div class="ff-point"><strong>Who it aligned</strong><span>Operations, product owners, subject-matter experts, designers, and development.</span></div>
+                <div class="ff-point"><strong>What followed</strong><span>Requirements, wireframes, prototypes, and implementation conversations.</span></div>
+              </div>
+            </div>
+            <a class="ff-link" href="bh-enterprise-ux.html">View the B&amp;H Enterprise UX case →</a>
+          </div>
+        </article>
+
+        <div class="ff-gallery">
+          <article class="ff-card">
+            <div class="ff-card-visual">
+              <div class="ff-card-visual-head"><span>WeightWatchers</span><span>Flow excerpt</span></div>
+              <svg class="ff-flow-small" viewBox="0 0 300 155" role="img" aria-label="Representative member workflow with a decision leading to guided alternate paths">
+                <defs><marker id="ff-arrow-ww" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="var(--ff-muted)"></path></marker></defs>
+                <path class="ff-connector" marker-end="url(#ff-arrow-ww)" d="M66 42 H120"></path><path class="ff-connector" marker-end="url(#ff-arrow-ww)" d="M180 42 H235"></path><path class="ff-connector" marker-end="url(#ff-arrow-ww)" d="M150 71 V105 H74"></path><path class="ff-connector" marker-end="url(#ff-arrow-ww)" d="M150 71 V105 H226"></path>
+                <rect class="ff-node" x="16" y="25" width="50" height="34" rx="3"></rect><text x="41" y="46" text-anchor="middle">Entry</text><polygon class="ff-node-key" points="150,15 180,42 150,69 120,42"></polygon><text x="150" y="46" text-anchor="middle">Choice</text><rect class="ff-node" x="38" y="105" width="72" height="34" rx="3"></rect><text x="74" y="126" text-anchor="middle">Path A</text><rect class="ff-node-end" x="190" y="105" width="72" height="34" rx="17"></rect><text x="226" y="126" text-anchor="middle">Path B</text>
+              </svg>
+            </div>
+            <div class="ff-card-copy"><h3>Member journeys</h3><p>Flows helped the team examine alternate member paths before committing to screens and detailed interaction design.</p><a href="weightwatchers.html">View WeightWatchers case →</a></div>
+          </article>
+
+          <article class="ff-card">
+            <div class="ff-card-visual">
+              <div class="ff-card-visual-head"><span>BrokerTec</span><span>Flow excerpt</span></div>
+              <svg class="ff-flow-small" viewBox="0 0 300 155" role="img" aria-label="Representative trading-system flow with validation and exception handling">
+                <defs><marker id="ff-arrow-bt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="var(--ff-muted)"></path></marker></defs>
+                <path class="ff-connector" marker-end="url(#ff-arrow-bt)" d="M78 42 H120"></path><path class="ff-connector" marker-end="url(#ff-arrow-bt)" d="M180 42 H222"></path><path class="ff-connector" marker-end="url(#ff-arrow-bt)" d="M150 70 V108 H220"></path>
+                <rect class="ff-node" x="18" y="25" width="60" height="34" rx="3"></rect><text x="48" y="46" text-anchor="middle">Action</text><polygon class="ff-node-key" points="150,15 180,42 150,69 120,42"></polygon><text x="150" y="46" text-anchor="middle">Valid?</text><rect class="ff-node-end" x="222" y="25" width="60" height="34" rx="17"></rect><text x="252" y="46" text-anchor="middle">Update</text><rect class="ff-node" x="184" y="108" width="72" height="34" rx="3"></rect><text x="220" y="129" text-anchor="middle">Exception</text>
+              </svg>
+            </div>
+            <div class="ff-card-copy"><h3>Interaction logic</h3><p>Functional flows created a bridge between information architecture, interface behavior, and front-end implementation.</p><a href="brokertec.html">View BrokerTec case →</a></div>
+          </article>
+
+          <article class="ff-card">
+            <div class="ff-card-visual">
+              <div class="ff-card-visual-head"><span>GHCM</span><span>Flow excerpt</span></div>
+              <svg class="ff-flow-small" viewBox="0 0 300 155" role="img" aria-label="Representative customer communication flow based on business rules and segmentation">
+                <defs><marker id="ff-arrow-gh" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="var(--ff-muted)"></path></marker></defs>
+                <path class="ff-connector" marker-end="url(#ff-arrow-gh)" d="M78 42 H120"></path><path class="ff-connector" marker-end="url(#ff-arrow-gh)" d="M180 42 H222"></path><path class="ff-connector" marker-end="url(#ff-arrow-gh)" d="M150 70 V108 H220"></path>
+                <rect class="ff-node" x="14" y="25" width="64" height="34" rx="3"></rect><text x="46" y="46" text-anchor="middle">Customer</text><polygon class="ff-node-key" points="150,15 180,42 150,69 120,42"></polygon><text x="150" y="46" text-anchor="middle">Rule</text><rect class="ff-node-end" x="222" y="25" width="64" height="34" rx="17"></rect><text x="254" y="46" text-anchor="middle">Message</text><rect class="ff-node" x="184" y="108" width="72" height="34" rx="3"></rect><text x="220" y="129" text-anchor="middle">Follow-up</text>
+              </svg>
+            </div>
+            <div class="ff-card-copy"><h3>Communication paths</h3><p>Customer behavior and business rules were translated into understandable paths for targeted communication.</p><a href="ghcm.html">View GHCM case →</a></div>
+          </article>
+        </div>
+
+        <div class="ff-related">
+          <h3>Related methods</h3>
+          <div class="ff-chips">
+            <a class="ff-chip" href="use-cases-requirements-personas.html">Use cases &amp; requirements</a>
+            <a class="ff-chip" href="wireframes-prototypes.html">Wireframes &amp; prototypes</a>
+            <a class="ff-chip" href="use-cases-requirements-personas.html">Personas</a>
+            <a class="ff-chip" href="site-maps-ia.html">Site maps &amp; IA</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Methods &amp; artifacts · Functional flows</span>
+      <span class="site-footer-links"><a href="resume.pdf">Resume</a><a href="contact.html">Contact</a></span>
+    </footer>
+  </div>
+</body>
+</html>

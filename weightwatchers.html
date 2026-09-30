@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A WeightWatchers UX case study by Gilbert Louis Midonnet, covering personas, use cases, business rules, functional flows, exception handling, and moderated testing.">
+  <title>WeightWatchers Case Study | Gilbert Louis Midonnet</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="case-study-page ww-page">
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="site-brand" href="index.html" aria-label="Gilbert Louis Midonnet portfolio home">
+        <strong>Gilbert Louis Midonnet</strong>
+        <span>UX · Customer experience · Enterprise systems</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Portfolio navigation">
+        <a href="index.html">Who I am</a>
+        <a href="career-timeline.html">Career timeline</a>
+        <a href="work-by-type.html">Work by type</a>
+        <a href="case-studies.html" aria-current="page">Case studies</a>
+      </nav>
+    </header>
+
+    <main class="page-main">
+      <section class="ww-hero">
+        <div>
+          <p class="kicker">Case study 02 · WeightWatchers</p>
+          <h1>Turning requirements into system behavior.</h1>
+          <p class="ww-lede">The strongest surviving evidence is not a finished screen. It is the work that made the product buildable: personas, use cases, business rules, decision flows, exception handling, and moderated testing.</p>
+        </div>
+
+        <aside class="ww-facts" aria-label="WeightWatchers case study facts">
+          <div class="ww-fact"><span>Role</span><strong>Information architect</strong></div>
+          <div class="ww-fact"><span>Focus</span><strong>Personas · Interaction logic · Usability</strong></div>
+          <div class="ww-fact"><span>Research</span><strong>Formal and informal moderated testing</strong></div>
+          <div class="ww-fact"><span>Evidence</span><strong>Use cases · Business rules · Functional flows</strong></div>
+        </aside>
+      </section>
+
+      <section class="ww-context">
+        <div>
+          <p class="kicker">Context</p>
+          <h2>Information architecture before “UX” became the usual name.</h2>
+        </div>
+        <div class="ww-context-copy">
+          <p>This was my first full-time information-architecture position. The work connected member goals and personas to detailed interaction behavior, while accounting for the technical limitations of the early web.</p>
+          <p>Single-page applications and asynchronous loading were not yet mature. Load time and server calls shaped the interaction, so the specification had to address both user behavior and the realities of implementation.</p>
+          <div class="ww-pill-row" aria-label="WeightWatchers work">
+            <a class="ww-pill" href="use-cases-requirements-personas.html">Personas</a>
+            <a class="ww-pill" href="use-cases-requirements-personas.html">Use cases</a>
+            <a class="ww-pill" href="use-cases-requirements-personas.html">Business rules</a>
+            <a class="ww-pill" href="functional-flows.html">Functional flows</a>
+            <span class="ww-pill">Moderated testing</span>
+            <span class="ww-pill">Technical constraints</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="ww-section">
+        <div class="ww-section-head">
+          <div>
+            <p class="kicker">01 · Menu Planner</p>
+            <h2>A use case became a behavioral specification.</h2>
+          </div>
+          <p>The menu-planner document did more than describe a page. It defined product states, what members could change, when information became committed, and what later actions followed from earlier choices.</p>
+        </div>
+
+        <div class="ww-split">
+          <figure class="ww-figure">
+            <div class="ww-image-wrap">
+              <img src="graphics/weightwatchers-menu-planner-rules.webp" width="900" height="1164" alt="WeightWatchers Menu Planner business rules and use case">
+            </div>
+            <figcaption>
+              <strong>Menu Planner business rules</strong>
+              <span>Profile inputs, plan selection, editability, journal behavior, favorites, printing, and downstream actions.</span>
+            </figcaption>
+          </figure>
+
+          <div>
+            <h3>The product was modeled as states and consequences.</h3>
+            <p>A plan could be current or upcoming, transferred or not transferred, editable or locked, selected in whole or in part, replaced, favorited, printed, or used to generate a shopping list.</p>
+            <div class="ww-state-list">
+              <div class="ww-state"><strong>Current / upcoming</strong><span>The plan’s status changes which actions remain available.</span></div>
+              <div class="ww-state"><strong>Editable / committed</strong><span>Moving information into the journal changes later behavior.</span></div>
+              <div class="ww-state"><strong>Whole / partial selection</strong><span>Members choose which meals become part of the journal.</span></div>
+              <div class="ww-state"><strong>Primary / downstream</strong><span>Planning produces consequences for journaling and shopping.</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ww-principle">
+          <blockquote>The design problem was a system of behaviors—not a collection of pages.</blockquote>
+          <p>This is the central value of the artifact. It translates a product concept into explicit rules that design, engineering, product, and testing can share.</p>
+        </div>
+      </section>
+
+      <section class="ww-section">
+        <div class="ww-section-head">
+          <div>
+            <p class="kicker">02 · Beyond the primary screen</p>
+            <h2>The requirement followed the member into the real-world task.</h2>
+          </div>
+          <p>The shopping list was treated as a downstream consequence of meal planning rather than as an isolated feature. The specification followed what members selected into the later task of acquiring ingredients.</p>
+        </div>
+
+        <div class="ww-split ww-split-reverse">
+          <div>
+            <h3>The list had to reflect what the member actually chose.</h3>
+            <p>Meals added to the plan determined the shopping list. The rules addressed aggregation, recipe context, purchase quantities, organization by store area, and the practical ways a member might carry the information away.</p>
+            <div class="ww-pill-row">
+              <span class="ww-pill">Derive from selected meals</span>
+              <span class="ww-pill">Aggregate quantities</span>
+              <span class="ww-pill">Retain recipe context</span>
+              <span class="ww-pill">Organize by store area</span>
+              <span class="ww-pill">Print</span>
+              <span class="ww-pill">Email</span>
+              <span class="ww-pill">Download</span>
+            </div>
+          </div>
+
+          <figure class="ww-figure">
+            <div class="ww-image-wrap">
+              <img src="graphics/weightwatchers-shopping-list-rules.webp" width="900" height="1164" alt="WeightWatchers shopping-list business rules">
+            </div>
+            <figcaption>
+              <strong>Shopping-list rules</strong>
+              <span>The digital planning task extends into a physical shopping task.</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="ww-section">
+        <div class="ww-section-head">
+          <div>
+            <p class="kicker">03 · Exceptions</p>
+            <h2>Failure, conflict, and maintenance were UX requirements.</h2>
+          </div>
+          <p>The use case did not stop at the happy path. It specified unavailable pages, unavailable suitable plans, conflicts with existing meals, administrative maintenance, and unresolved questions.</p>
+        </div>
+
+        <div class="ww-split">
+          <figure class="ww-figure">
+            <div class="ww-image-wrap">
+              <img src="graphics/weightwatchers-exceptions-requirements.webp" width="900" height="1164" alt="WeightWatchers process narrative, exception steps, and non-functional requirements">
+            </div>
+            <figcaption>
+              <strong>Process, exceptions, and requirements</strong>
+              <span>Error conditions and administrative behavior are documented alongside the primary flow.</span>
+            </figcaption>
+          </figure>
+
+          <div>
+            <h3>A usable system includes what happens when the intended path breaks.</h3>
+            <p>Once information is committed elsewhere, a failure or conflict can affect more than the current screen. The document therefore addressed recovery, messaging, content availability, and the people responsible for maintaining the underlying plan set.</p>
+            <div class="ww-logic-grid">
+              <div class="ww-logic"><span>01</span><h3>Failure</h3><p>What happens when a page or service is unavailable?</p></div>
+              <div class="ww-logic"><span>02</span><h3>Conflict</h3><p>What happens when a meal already occupies the target location?</p></div>
+              <div class="ww-logic"><span>03</span><h3>Coverage</h3><p>What happens when no suitable plan is available?</p></div>
+              <div class="ww-logic"><span>04</span><h3>Maintenance</h3><p>How is the menu-plan set administered over time?</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="ww-section">
+        <div class="ww-section-head">
+          <div>
+            <p class="kicker">04 · Exercise flow</p>
+            <h2>The functional flow modeled logic—not merely navigation.</h2>
+          </div>
+          <p>The exercise flow joined user action, system response, validation, duplicate handling, favorites, Quicklist behavior, and journal behavior into one executable view of the interaction.</p>
+        </div>
+
+        <div class="ww-flow-layout">
+          <figure class="ww-figure ww-flow-figure">
+            <div class="ww-image-wrap">
+              <img src="graphics/weightwatchers-exercise-functional-flow.webp" width="820" height="2072" alt="WeightWatchers exercise functional flow">
+            </div>
+            <figcaption>
+              <strong>Exercise functional flow</strong>
+              <span>A branching behavioral model with actions, decisions, errors, system responses, and connectors.</span>
+            </figcaption>
+          </figure>
+
+          <div class="ww-flow-notes">
+            <h3>What the diagram makes explicit</h3>
+            <div class="ww-flow-sequence">
+              <div class="ww-flow-step"><b>01</b><span>Members locate or choose an activity, including search and suggested choices.</span></div>
+              <div class="ww-flow-step"><b>02</b><span>The system validates duration and intensity and handles missing or incorrect input.</span></div>
+              <div class="ww-flow-step"><b>03</b><span>Favorites and Quicklist choices affect what is available for reuse.</span></div>
+              <div class="ww-flow-step"><b>04</b><span>Duplicate entries and existing states change what happens next.</span></div>
+              <div class="ww-flow-step"><b>05</b><span>The final action updates the member’s journal and returns the system to a stable state.</span></div>
+            </div>
+            <p>A sitemap could show where the exercise feature lived. This flow showed how the feature behaved.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="ww-section">
+        <div class="ww-section-head">
+          <div>
+            <p class="kicker">05 · Testing</p>
+            <h2>The specifications stayed connected to observed use.</h2>
+          </div>
+          <p>I participated in extensive moderated, in-person testing. Formal sessions and quick iterative tests played different roles, but both kept the work grounded in how members actually understood the product.</p>
+        </div>
+
+        <div class="ww-testing">
+          <article class="ww-test">
+            <span class="ww-test-number">01</span>
+            <h3>Formal moderated studies</h3>
+            <p>Professional facilitators conducted sessions in observation suites, allowing the team to watch where members understood the model, hesitated, or interpreted the interaction differently than expected.</p>
+          </article>
+          <article class="ww-test">
+            <span class="ww-test-number">02</span>
+            <h3>Informal iterative testing</h3>
+            <p>Smaller tests provided faster feedback during design. They supported revision without treating every question as requiring a full research event.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="ww-artifacts">
+        <div class="ww-artifact-head">
+          <div>
+            <p class="kicker">What the work left behind</p>
+            <h2>The evidence attached to this job.</h2>
+          </div>
+          <p>These artifacts also appear in the Work by Type indexes. Here they remain connected to the WeightWatchers role and the product decisions they supported.</p>
+        </div>
+
+        <div class="ww-artifact-rows">
+          <a class="ww-artifact-row" href="use-cases-requirements-personas.html"><strong>Use cases &amp; business rules</strong><span class="ww-pills"><span class="ww-pill">Menu Planner</span><span class="ww-pill">Plan states</span><span class="ww-pill">Journal behavior</span><span class="ww-pill">Favorites</span></span></a>
+          <a class="ww-artifact-row" href="use-cases-requirements-personas.html"><strong>Downstream task requirements</strong><span class="ww-pills"><span class="ww-pill">Shopping-list derivation</span><span class="ww-pill">Quantity aggregation</span><span class="ww-pill">Print / email / download</span></span></a>
+          <a class="ww-artifact-row" href="use-cases-requirements-personas.html"><strong>Exceptions &amp; administration</strong><span class="ww-pills"><span class="ww-pill">Failure states</span><span class="ww-pill">Conflicts</span><span class="ww-pill">Non-functional requirements</span><span class="ww-pill">Maintenance</span></span></a>
+          <a class="ww-artifact-row" href="functional-flows.html"><strong>Functional flows</strong><span class="ww-pills"><span class="ww-pill">Exercise entry</span><span class="ww-pill">Validation</span><span class="ww-pill">Duplicate handling</span><span class="ww-pill">System responses</span></span></a>
+          <div class="ww-artifact-row"><strong>Research practice</strong><span class="ww-pills"><span class="ww-pill">Formal moderated testing</span><span class="ww-pill">Informal iteration</span></span></div>
+        </div>
+      </section>
+
+      <section class="ww-takeaway">
+        <div>
+          <p class="kicker">Case takeaway</p>
+          <h2>Good requirements describe consequences.</h2>
+          <p>The work connected member goals to rules, states, decisions, errors, and system responses. That made the intended experience understandable before implementation—and testable once it existed.</p>
+        </div>
+        <div class="ww-takeaway-list" aria-label="WeightWatchers capabilities demonstrated">
+          <span>Behavioral specification and business rules</span>
+          <span>Functional flows and exception modeling</span>
+          <span>Task continuity beyond the primary screen</span>
+          <span>Moderated usability testing</span>
+        </div>
+      </section>
+
+      <section class="ww-next">
+        <p>This case is less visually polished than a modern UI gallery—and more useful as evidence of how complex product behavior was reasoned through.</p>
+        <div class="button-group">
+          <a class="button button-primary" href="ghcm.html">Next case study</a>
+          <a class="button" href="work-by-type.html">Return to work by type</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Gilbert Louis Midonnet · Portfolio</span>
+      <span class="site-footer-links"><a href="resume.pdf">Resume</a><a href="contact.html">Contact</a></span>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A B&H enterprise UX case study by Gilbert Louis Midonnet covering order management, Salesforce, progressive disclosure, dashboards, and exception handling.">
+  <title>B&amp;H Enterprise UX Case Study | Gilbert Louis Midonnet</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="case-study-page bh-enterprise-page">
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="site-brand" href="index.html" aria-label="Gilbert Louis Midonnet portfolio home">
+        <strong>Gilbert Louis Midonnet</strong>
+        <span>UX · Customer experience · Enterprise systems</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Portfolio navigation">
+        <a href="index.html">Who I am</a>
+        <a href="career-timeline.html">Career timeline</a>
+        <a href="work-by-type.html">Work by type</a>
+        <a href="case-studies.html" aria-current="page">Case studies</a>
+      </nav>
+    </header>
+
+    <main class="page-main">
+      <section class="bh-hero">
+        <div>
+          <p class="kicker">Featured case · B&amp;H enterprise systems</p>
+          <h1>Modernizing expert tools without losing expert speed.</h1>
+          <p class="bh-lede">The challenge was not to make dense operational systems look simpler. It was to make them easier to learn and navigate while preserving the information, speed, exceptions, and cross-system connections that experienced employees depended on.</p>
+        </div>
+
+        <aside class="bh-facts" aria-label="B&H case study facts">
+          <div class="bh-facts-top">
+            <div class="bh-fact"><span>Role</span><strong>UX developer · Information architect</strong></div>
+            <div class="bh-fact"><span>Period</span><strong>Enterprise UX · 2014–2019</strong></div>
+            <a class="bh-phase-card" href="bh-insights-cx.html" aria-label="Go to B&H Customer Insights and Customer Experience case study">
+              <span class="bh-phase-card-copy"><strong>CX</strong><span>2019–Present</span></span>
+              <span class="bh-phase-card-arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+          <div class="bh-fact"><span>Systems</span><strong>IBM Sterling OMS · Salesforce · Custom B&amp;H tools</strong></div>
+          <div class="bh-fact"><span>Users</span><strong>Sales · Customer service · Cashiers · Buyers · Managers</strong></div>
+        </aside>
+      </section>
+
+      <section class="bh-context">
+        <div>
+          <p class="kicker">The transition</p>
+          <h2>A new interface could not become a slower system.</h2>
+        </div>
+        <div class="bh-context-copy">
+          <p>The existing order-management system was menu-driven and highly efficient for experts, but difficult for new employees accustomed to graphical interfaces. Replacing it meant carrying forward the value hidden inside that density.</p>
+          <p>Requirements documents and high-level sketches established the business problem. Functional flows, wireframes, and working HTML/JavaScript prototypes then made complex behaviors visible enough to test, refine, and approve.</p>
+          <div class="bh-pill-row"><span class="bh-pill">Roles and permissions</span><span class="bh-pill">Business rules</span><span class="bh-pill">Operational exceptions</span><span class="bh-pill">Progressive disclosure</span><span class="bh-pill">Interactive prototypes</span></div>
+        </div>
+      </section>
+
+      <section class="bh-section">
+        <div class="bh-section-head">
+          <div>
+            <p class="kicker">01 · Order management</p>
+            <h2>Order work and product knowledge had to stay connected.</h2>
+          </div>
+          <p>Store and phone sales, customer service, and cashier roles shared the OMS, but did not perform the same job. A core requirement was letting employees move quickly between the order they were handling and the product information needed to help the customer.</p>
+        </div>
+
+        <div class="bh-evidence bh-evidence-copy-first">
+          <div>
+            <h3>Modernization meant preserving working knowledge.</h3>
+            <p>The legacy interface encoded years of operational adaptation. The design problem was therefore not a cosmetic conversion from menus to screens; it was deciding what needed to remain immediately visible, what could be grouped, and what could be revealed when needed.</p>
+            <div class="bh-points">
+              <div class="bh-point"><b>01</b><span>Support distinct workflows for sales, service, and cashier roles.</span></div>
+              <div class="bh-point"><b>02</b><span>Keep current and previous order information readily available.</span></div>
+              <div class="bh-point"><b>03</b><span>Bridge “order view” and “website view” without breaking the customer conversation.</span></div>
+              <div class="bh-point"><b>04</b><span>Connect OMS activity with customer-service information in Salesforce.</span></div>
+            </div>
+          </div>
+          <div class="bh-ops-gallery" aria-label="B&H OMS and Salesforce interface examples">
+            <figure class="bh-figure">
+              <div class="bh-image-wrap bh-image-wrap-compact"><img src="graphics/Mockup-BH-OMS-catalog-450.webp" alt="B&H order-management catalog screen with product categories and order summary"></div>
+              <figcaption><strong>OMS catalog</strong><span>Product browsing and order context kept in the same working environment.</span></figcaption>
+            </figure>
+            <figure class="bh-figure">
+              <div class="bh-image-wrap bh-image-wrap-compact"><img src="graphics/OMS-invoice-view2.webp" alt="B&H order-management invoice view with product details and order summary"></div>
+              <figcaption><strong>OMS invoice view</strong><span>Order detail, product information, and actions presented together.</span></figcaption>
+            </figure>
+            <figure class="bh-figure">
+              <div class="bh-image-wrap bh-image-wrap-compact"><img src="graphics/Mockup-BH-Salesforce-450.webp" alt="B&H Salesforce workspace showing customer information and open order activity"></div>
+              <figcaption><strong>Salesforce workspace</strong><span>Customer context and order activity connected across systems.</span></figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="bh-principle">
+          <blockquote>The interface had to reduce the learning curve—not reduce the work the system could support.</blockquote>
+          <p>That distinction anchors the case: clarity came from organization, hierarchy, and interaction—not by removing the information expert employees needed.</p>
+        </div>
+      </section>
+
+      <section class="bh-section">
+        <div class="bh-section-head">
+          <div>
+            <p class="kicker">02 · Salesforce</p>
+            <h2>A customer view assembled from several systems.</h2>
+          </div>
+          <p>B&amp;H replaced Salesforce’s rudimentary 2016 out-of-the-box screens with a role-sensitive workspace connecting orders, interaction history, customer 360 information, Fullstory, and the order-management system.</p>
+        </div>
+
+        <div class="bh-salesforce-copy">
+          <h3>The page was an integration point.</h3>
+          <p>Permissioned users could see the current order, drill into order detail, review earlier customer interactions, and access analytical information without treating each source as an unrelated destination.</p>
+          <div class="bh-system-strip" aria-label="Connected enterprise information">
+            <div class="bh-system"><strong>Current order</strong><span>Immediate context for the active customer interaction.</span></div>
+            <div class="bh-system"><strong>History</strong><span>Prior customer-service contacts and outcomes.</span></div>
+            <div class="bh-system"><strong>Customer 360</strong><span>Broader customer information controlled by role and permission.</span></div>
+            <div class="bh-system"><strong>Analysis</strong><span>Flags, dashboards, and drill-down views for authorized users.</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bh-section">
+        <div class="bh-section-head">
+          <div>
+            <p class="kicker">03 · Progressive disclosure</p>
+            <h2>Twenty possible buyers. Four to six that usually mattered.</h2>
+          </div>
+          <p>Managers and buyers needed to see everyone associated with a SKU, identify the people most relevant to the current issue, track unanswered questions, and notice important flags—even when the information could not all fit on the first screen.</p>
+        </div>
+
+        <div class="bh-gallery">
+          <figure class="bh-figure">
+            <div class="bh-image-wrap"><img src="graphics/Bids-ToDo-Final-Two-Versions.webp" alt="Two final B&H Bids to-do interface versions for buyer workflow"></div>
+            <figcaption><strong>Final interface versions</strong><span>The approved direction translates the buyer workflow into a scannable operational screen.</span></figcaption>
+          </figure>
+          <figure class="bh-figure">
+            <div class="bh-image-wrap"><img src="graphics/Sketch-BH-Bids-Buyers-wordpress.webp" alt="B&H Bids buyer workflow sketches exploring buyer ordering, visibility, and status"></div>
+            <figcaption><strong>Buyer-workflow studies</strong><span>Early explorations worked through ordering, visibility, completion state, and what each role needed to see.</span></figcaption>
+          </figure>
+        </div>
+
+        <div class="bh-callout">
+          <article><strong>Immediate layer</strong><p>Show the small set of buyers most likely to matter for the current task.</p></article>
+          <article><strong>Signal layer</strong><p>Make unanswered questions and critical hidden information visible before the user expands anything.</p></article>
+          <article><strong>Detail layer</strong><p>Reveal the larger relationship set progressively instead of forcing every name into the first view.</p></article>
+        </div>
+      </section>
+
+      <section class="bh-section">
+        <div class="bh-section-head">
+          <div>
+            <p class="kicker">04 · Analysis and exceptions</p>
+            <h2>The uncommon cases were part of the system.</h2>
+          </div>
+          <p>Operational applications do not end when the common path works. Dashboards helped users scan status and inventory; discrepancy tools surfaced the records automation could not settle and gave people a structured way to investigate them.</p>
+        </div>
+
+        <div class="bh-analysis-grid">
+          <figure class="bh-figure">
+            <div class="bh-image-wrap"><img src="graphics/Mockup-BH-VPC-AddBackgroundColor-trimmed-1.webp" alt="B&H VPC vendor table studies using background color to distinguish financial categories"></div>
+            <figcaption><strong>VPC table hierarchy</strong><span>Background treatment helps separate dense financial categories without reducing the amount of information shown.</span></figcaption>
+          </figure>
+          <figure class="bh-figure">
+            <div class="bh-image-wrap"><img src="graphics/Mockup-BH-VPC-Discrepencies-v3-singleImage-wordpress.webp" alt="B&H VPC discrepancy-review interface showing program rows and exception details"></div>
+            <figcaption><strong>VPC discrepancy review</strong><span>Exceptions that require human judgment are surfaced in the context of the underlying program and amounts.</span></figcaption>
+          </figure>
+        </div>
+        <div class="bh-note"><strong>Evidence boundary:</strong> portions of the dashboard and project data are intentionally redacted. The case uses only the public-safe screens that survive in the existing portfolio.</div>
+      </section>
+
+      <section class="bh-artifacts">
+        <div class="bh-artifact-head">
+          <div>
+            <p class="kicker">What the work left behind</p>
+            <h2>Artifacts that preserve operational reasoning.</h2>
+          </div>
+          <p>The strongest evidence is not a single polished screen. It is the path from requirements and alternatives to an interface that makes complicated work navigable.</p>
+        </div>
+
+        <div class="bh-artifact-rows">
+          <a class="bh-artifact-row" href="use-cases-requirements-personas.html"><strong>Problem definition</strong><span class="bh-pill-row"><span class="bh-pill">Functional requirements</span><span class="bh-pill">Business rules</span><span class="bh-pill">Roles</span><span class="bh-pill">Permissions</span><span class="bh-pill">Exceptions</span></span></a>
+          <a class="bh-artifact-row" href="functional-flows.html"><strong>Interaction reasoning</strong><span class="bh-pill-row"><span class="bh-pill">High-level sketches</span><span class="bh-pill">Functional flows</span><span class="bh-pill">Wireframes</span><span class="bh-pill">Alternative designs</span></span></a>
+          <a class="bh-artifact-row" href="wireframes-prototypes.html"><strong>Production detail</strong><span class="bh-pill-row"><span class="bh-pill">HTML prototypes</span><span class="bh-pill">JavaScript behavior</span><span class="bh-pill">Interaction models</span><span class="bh-pill">Approved interfaces</span></span></a>
+          <div class="bh-artifact-row"><strong>Enterprise patterns</strong><span class="bh-pill-row"><span class="bh-pill">Role-based views</span><span class="bh-pill">Cross-system context</span><span class="bh-pill">Progressive disclosure</span><span class="bh-pill">Dashboards</span><span class="bh-pill">Discrepancy handling</span></span></div>
+        </div>
+
+        <div class="bh-scope">
+          <div><strong>Case scope</strong><p>This featured case focuses on B&amp;H enterprise UX from 2014–2019, where the surviving visual evidence is strongest. The later Customer Insights and Medallia work remains prominent elsewhere in the portfolio as a separate capability story.</p></div>
+          <div class="bh-pill-row"><span class="bh-pill">Enterprise UX</span><span class="bh-pill">Current CX shown separately</span></div>
+        </div>
+
+        <div class="bh-next">
+          <p>Next: the later B&amp;H Customer Insights and CX work, where research, surveys, and operational response became a connected capability.</p>
+          <div class="button-group">
+            <a class="button" href="independent-consulting.html">Back to Consulting</a>
+            <a class="button button-primary" href="bh-insights-cx.html">Next: Insights &amp; CX</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>B&amp;H enterprise systems · Featured case</span>
+      <span class="site-footer-links"><a href="resume.pdf">Resume</a><a href="contact.html">Contact</a></span>
+    </footer>
+  </div>
+</body>
+</html>
