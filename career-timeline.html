@@ -6,6 +6,48 @@
   <meta name="description" content="The career timeline of Gilbert Louis Midonnet, from early web development through enterprise UX and customer experience.">
   <title>Career Timeline | Gilbert Louis Midonnet</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+/* Role evolution modal */
+#role-modal {
+  width: min(1280px, 94vw);
+  max-width: none;
+  max-height: 90vh;
+  padding: 0;
+  border: 1px solid var(--line, #dedbd3);
+  border-radius: 8px;
+  background: var(--paper, #f5f2ec);
+  color: var(--ink, #20363c);
+}
+#role-modal::backdrop { background: rgb(0 0 0 / 60%); }
+#role-modal .role-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 1rem 1.5rem;
+  background: inherit;
+  border-bottom: 1px solid var(--line, #dedbd3);
+}
+#role-modal .role-modal-header h2 { margin: 0; font-size: 1.4rem; }
+#role-modal .role-modal-header form { margin: 0; }
+#role-modal .role-modal-content { padding: 1.5rem; }
+#role-modal .rj-section-head { padding-top: 0; }
+body.role-modal-open { overflow: hidden; }
+
+/* Taller role charts with labels directly on each band. */
+#role-modal .rj-mini { height: auto; min-height: 100px; }
+#role-modal .role-band-label {
+  fill: #203039;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 7px;
+}
+@media (prefers-color-scheme: dark) {
+  #role-modal .role-band-label { fill: #f3eee5; }
+}
+  </style>
 </head>
 <body class="career-page">
   <div class="site-shell">
@@ -195,7 +237,7 @@
         <h2>How my role changed</h2>
         <p>The balance of project management, user experience, and
           development shifted from job to job.</p>
-        <a class="button" href="role-evolution-by-job.html">
+        <a class="button" id="open-role-modal" href="role-evolution-by-job.html" aria-haspopup="dialog">
           See how my role changed across these jobs →
         </a>
       </section>
@@ -206,5 +248,122 @@
       <span class="site-footer-links"><a href="resume.pdf">Resume</a><a href="contact.html">Contact</a></span>
     </footer>
   </div>
+
+  <dialog class="role-evolution-page" id="role-modal" aria-labelledby="role-modal-title">
+    <header class="role-modal-header">
+      <h2 id="role-modal-title">How my role changed</h2>
+      <form method="dialog"><button class="button" type="submit" autofocus>Close ×</button></form>
+    </header>
+    <div class="role-modal-content">
+      <p>Each row estimates the balance of work within a job—not proficiency scores or timesheet accounting.</p>
+
+        <div class="rj-section-head">
+          <div>
+            <p class="kicker">Job-by-job view</p>
+            <h2>Different roles, clearly separated.</h2>
+          </div>
+          <p>Within each row, the full height represents the whole job. A sloping boundary indicates that the mix changed meaningfully during that period.</p>
+        </div>
+
+        <div class="rj-legend" aria-label="Role categories">
+          <span class="rj-key"><i class="rj-swatch rj-swatch-dev" aria-hidden="true"></i>Development &amp; prototyping</span>
+          <span class="rj-key"><i class="rj-swatch rj-swatch-ux" aria-hidden="true"></i>Information architecture &amp; UX</span>
+          <span class="rj-key"><i class="rj-swatch rj-swatch-pm" aria-hidden="true"></i>Business analysis &amp; project management</span>
+          <span class="rj-key"><i class="rj-swatch rj-swatch-cx" aria-hidden="true"></i>Customer Insights &amp; CX</span>
+        </div>
+
+        <div class="rj-list">
+          <article class="rj-row">
+            <div class="rj-job"><strong>Brooklyn College</strong><span>Early web work → broader responsibility</span></div>
+            <svg class="rj-mini" viewBox="0 0 420 120" role="img" aria-label="Brooklyn College: development decreased as IA, UX and project management grew."><path class="rj-dev" d="M0 24 L140 24 L185 36 L230 48 L280 48 L330 72 L420 72 L420 120 L330 120 L280 120 L230 120 L185 120 L140 120 L0 120 Z"></path><path class="rj-ux" d="M0 0 L140 0 L185 12 L230 12 L280 24 L330 24 L420 24 L420 72 L330 72 L280 48 L230 48 L185 36 L140 24 L0 24 Z"></path><path class="rj-pm" d="M0 0 L140 0 L185 0 L230 0 L280 0 L330 0 L420 0 L420 24 L330 24 L280 24 L230 12 L185 12 L140 0 L0 0 Z"></path><text x="410" y="16" text-anchor="end" class="role-band-label">Project management</text><text x="410" y="51" text-anchor="end" class="role-band-label">IA / UX</text><text x="410" y="101" text-anchor="end" class="role-band-label">Front-end development</text></svg>
+            <div class="rj-caption"><strong>The mix widened.</strong>Requirements, IA/UX and project management grew out of hands-on development.</div>
+          </article>
+
+          <article class="rj-row">
+            <div class="rj-job"><strong>ClubMom</strong><span>Technical PM / BA / IA</span></div>
+            <svg class="rj-mini" viewBox="0 0 420 120" role="img" aria-label="ClubMom: primarily technical project management and business analysis, with IA and UX increasing."><path class="rj-ux" d="M0 84 L140 84 L185 84 L230 72 L280 72 L330 72 L420 72 L420 120 L330 120 L280 120 L230 120 L185 120 L140 120 L0 120 Z"></path><path class="rj-pm" d="M0 0 L140 0 L185 0 L230 0 L280 0 L330 0 L420 0 L420 72 L330 72 L280 72 L230 72 L185 84 L140 84 L0 84 Z"></path><text x="410" y="38" text-anchor="end" class="role-band-label">Technical PM / BA</text><text x="410" y="100" text-anchor="end" class="role-band-label">IA / UX</text></svg>
+            <div class="rj-caption"><strong>Delivery was central.</strong>Primarily technical project management and business analysis, with substantial user flows and wireframes.</div>
+          </article>
+
+          <article class="rj-row">
+            <div class="rj-job"><strong>WeightWatchers</strong><span>Information architecture</span></div>
+            <svg class="rj-mini" viewBox="0 0 420 120" role="img" aria-label="WeightWatchers: exclusively information architecture."><path class="rj-ux" d="M0 0 L140 0 L185 0 L230 0 L280 0 L330 0 L420 0 L420 120 L330 120 L280 120 L230 120 L185 120 L140 120 L0 120 Z"></path><text x="410" y="64" text-anchor="end" class="role-band-label">Information architecture</text></svg>
+            <div class="rj-caption"><strong>An IA position.</strong>Personas, functional flows, wireframes and user testing were central to the role.</div>
+          </article>
+
+          <article class="rj-row">
+            <div class="rj-job"><strong>BrokerTec</strong><span>Implementation → information architecture</span></div>
+            <svg class="rj-mini" viewBox="0 0 420 120" role="img" aria-label="BrokerTec: front-end development and IA/UX, shifting toward IA/UX."><path class="rj-dev" d="M0 36 L140 36 L185 72 L230 72 L280 84 L330 84 L420 84 L420 120 L330 120 L280 120 L230 120 L185 120 L140 120 L0 120 Z"></path><path class="rj-ux" d="M0 0 L140 0 L185 0 L230 0 L280 0 L330 0 L420 0 L420 84 L330 84 L280 84 L230 72 L185 72 L140 36 L0 36 Z"></path><text x="410" y="44" text-anchor="end" class="role-band-label">IA / UX</text><text x="410" y="106" text-anchor="end" class="role-band-label">Front-end development</text></svg>
+            <div class="rj-caption"><strong>Design and implementation.</strong>Front-end development gradually gave way to a larger IA/UX emphasis.</div>
+          </article>
+
+          <article class="rj-row">
+            <div class="rj-job"><strong>GHCM</strong><span>UX leadership → broader PM responsibility</span></div>
+            <svg class="rj-mini" viewBox="0 0 420 120" role="img" aria-label="GHCM: front-end development receded and project management grew alongside IA/UX."><path class="rj-dev" d="M0 90 L140 90 L185 90 L230 120 L280 120 L330 120 L420 120 L420 120 L330 120 L280 120 L230 120 L185 120 L140 120 L0 120 Z"></path><path class="rj-ux" d="M0 12 L140 12 L185 12 L230 12 L280 60 L330 60 L420 60 L420 120 L330 120 L280 120 L230 120 L185 90 L140 90 L0 90 Z"></path><path class="rj-pm" d="M0 0 L140 0 L185 0 L230 0 L280 0 L330 0 L420 0 L420 60 L330 60 L280 60 L230 12 L185 12 L140 12 L0 12 Z"></path><text x="410" y="33" text-anchor="end" class="role-band-label">Project management</text><text x="410" y="93" text-anchor="end" class="role-band-label">IA / UX</text><text x="10" y="110" class="role-band-label">Front-end development</text></svg>
+            <div class="rj-caption"><strong>Responsibility expanded.</strong>Development receded while project management grew alongside IA/UX.</div>
+          </article>
+
+          <article class="rj-row">
+            <div class="rj-job"><strong>Independent consulting</strong><span>Across 16–20 companies</span></div>
+            <svg class="rj-mini" viewBox="0 0 420 120" role="img" aria-label="Independent consulting: the first 30 percent of the period was entirely project management, then transitioned to entirely information architecture and UX"><path class="rj-pm" d="M0 0 H190 L126 120 H0 Z"></path><path class="rj-ux" d="M126 120 L190 0 H420 V120 Z"></path><text x="10" y="60" class="role-band-label">Project management</text><text x="410" y="72" text-anchor="end" class="role-band-label">IA / UX</text></svg>
+            <div class="rj-caption"><strong>From PM to UX.</strong>The first 30% of the period was entirely project management, followed by a transition into IA/UX.</div>
+          </article>
+
+          <article class="rj-row">
+            <div class="rj-job"><strong>B&amp;H · Enterprise UX</strong><span>2014–2019</span></div>
+            <svg class="rj-mini" viewBox="0 0 420 120" role="img" aria-label="B&H 2014–2019: exclusively UX."><path class="rj-ux" d="M0 0 L140 0 L185 0 L230 0 L280 0 L330 0 L420 0 L420 120 L330 120 L280 120 L230 120 L185 120 L140 120 L0 120 Z"></path><text x="410" y="64" text-anchor="end" class="role-band-label">Enterprise UX</text></svg>
+            <div class="rj-caption"><strong>Exclusively UX.</strong>Internal workflows and complex enterprise applications were the focus.</div>
+          </article>
+
+          <article class="rj-row">
+            <div class="rj-job"><strong>B&amp;H · Insights &amp; CX</strong><span>2019–present</span></div>
+            <svg class="rj-mini" viewBox="0 0 420 120" role="img" aria-label="B&amp;H Customer Insights and CX: entirely customer experience work"><rect class="rj-cx" width="420" height="120"></rect><text x="410" y="64" text-anchor="end" class="role-band-label">Customer Insights / CX</text></svg>
+            <div class="rj-caption"><strong>Entirely CX.</strong>Surveys, analysis, reporting, platform governance and integration supported customer experience.</div>
+          </article>
+        </div>
+
+        <div class="rj-axis-note"><span></span><span class="rj-direction"><span>Earlier in role</span><span>Later in role</span></span><span>Approximate emphasis</span></div>
+
+        
+      
+    </div>
+  </dialog>
+  <script>
+    (() => {
+      const trigger = document.getElementById('open-role-modal');
+      const modal = document.getElementById('role-modal');
+      const sizeChartLabels = () => {
+        const legend = modal.querySelector('.rj-key');
+        if (!legend || !modal.open) return;
+        const labelSize = parseFloat(getComputedStyle(legend).fontSize);
+        modal.querySelectorAll('.rj-mini').forEach((chart) => {
+          const scale = chart.getBoundingClientRect().width / chart.viewBox.baseVal.width;
+          if (!scale) return;
+          chart.querySelectorAll('.role-band-label').forEach((label) => {
+            label.style.fontSize = `${labelSize / scale}px`;
+          });
+        });
+      };
+      window.addEventListener('resize', sizeChartLabels);
+      if (typeof modal.showModal !== 'function') return;
+      trigger.addEventListener('click', (event) => {
+        event.preventDefault();
+        modal.showModal();
+        sizeChartLabels();
+        modal.scrollTop = 0;
+        document.body.classList.add('role-modal-open');
+      });
+      modal.addEventListener('close', () => {
+        document.body.classList.remove('role-modal-open');
+        trigger.focus({ preventScroll: true });
+      });
+      modal.addEventListener('click', (event) => {
+        if (event.target !== modal) return;
+        const box = modal.getBoundingClientRect();
+        if (event.clientX < box.left || event.clientX > box.right ||
+            event.clientY < box.top || event.clientY > box.bottom) modal.close();
+      });
+    })();
+  </script>
 </body>
 </html>
